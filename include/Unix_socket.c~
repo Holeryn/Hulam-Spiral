@@ -1,0 +1,5 @@
+#include "Unix_socket.h"
+
+int SUnixConnect(const char *name,const struct socaddr_un addr){
+
+}
