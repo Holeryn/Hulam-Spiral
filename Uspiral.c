@@ -1,7 +1,8 @@
 #include "primes.h"
 #include "include/gfx.h"
 
-#define SIZE 700
+#define SIZE 500
+#define PADDING 150
 
 // quadratic polynomials that descrives the Diagonals
 // taked counter clocwirse order
@@ -46,7 +47,7 @@ void spiral(void){
   int row = 1;
   // a exist because we start in UP
   int a = 1;
-  gfx_point(SIZE / 2 + 1, SIZE / 2);
+  gfx_point(SIZE / 2 + 1 + PADDING, SIZE / 4);
 
   for(int i = 3; i <= 100000; i++){
     if(times == 4 - a){
@@ -80,7 +81,7 @@ void spiral(void){
     }
 
     if(i == primes[Pcounter]){
-      gfx_point(SIZE / 2 + X, SIZE / 2 + Y);
+      gfx_point(SIZE / 2 + X + PADDING, SIZE / 4 + Y);
       Pcounter++;
     }
   }
