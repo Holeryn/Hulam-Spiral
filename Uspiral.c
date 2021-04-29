@@ -70,14 +70,11 @@ void spiral(void){
       times++;
     }
 
-    if(state == LEFT){
-      X--;
-    }else if(state == RIGHT){
-      X++;
-    }else if(state == DOWN){
-      Y--;
-    }else if(state == UP){
-      Y++;
+    switch(state){
+    	case LEFT: 	X--; 	break;
+    	case RIGHT: X++; 	break;
+    	case DOWN:	Y--;	break;
+    	case UP:	Y++;	break;
     }
 
     if(i == primes[Pcounter]){
